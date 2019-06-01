@@ -1,9 +1,26 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
+mockPosts = [
+    {
+        'author': 'Andrew Leong',
+        'title': 'My new macbook pro',
+        'content': 'My first content',
+        'date_posted': 'May 10, 2019'
+    },
+    {
+        'author': 'Sarah Lee',
+        'title': 'My new mac mini',
+        'content': 'My second content',
+        'date_posted': 'May 28, 2019'
+    }
+]
 
 def home(request):
-    return HttpResponse('<h1>Home Blog</h1>')
+    # context is for passing data to templates
+    context = {
+        'posts': mockPosts
+    }
+    return render(request, 'blog/home.html', context)
 
 def about(request):
-    return HttpResponse('<h1>About</h1>')
+    return render(request, 'blog/about.html')

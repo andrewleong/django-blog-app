@@ -3,5 +3,6 @@
     "python.linting.flake8Enabled": false,
     "python.linting.pep8Enabled": false,
     "python.linting.prospectorEnabled": false,
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "python.pythonPath": "blog_env/bin/python2.7"
 }
